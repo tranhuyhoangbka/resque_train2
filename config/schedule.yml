@@ -1,2 +1,4 @@
 Archive:
-  cron: "*/30 * * * * *"
+  cron: "*/3 * * * *"
+SleepJob:
+  cron: "*/4 * * * *"

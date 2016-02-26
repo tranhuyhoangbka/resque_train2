@@ -7,6 +7,9 @@ gem "resque"
 gem 'resque-web', require: 'resque_web'
 gem "resque-scheduler"
 gem "resque-pool"
+gem "resque-status"
+gem "resque-retry"
+gem "resque-loner"
 gem "devise"
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

@@ -1,5 +1,8 @@
 foo: 3
 bar: 2
+sleepjob: 2
+example_resque_retry: 1
+job_loner: 1
 "foo,bar,baz": 1
 
 production:

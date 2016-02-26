@@ -1,4 +1,11 @@
+require 'resque/server'
+require 'resque-scheduler'
+require 'resque/scheduler/server'
+require 'resque-retry'
+require 'resque-retry/server'
+
 Rails.application.routes.draw do
+  ResqueWeb::Engine.eager_load!
   devise_for :users
   root "static_pages#home"
 
@@ -8,7 +15,7 @@ Rails.application.routes.draw do
   end
 
   constraints resque_web_constraint do
-    mount ResqueWeb::Engine => "/resque_web"
+    mount Resque::Server.new, :at => "/resque"
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
